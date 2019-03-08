@@ -32,7 +32,7 @@ RUN nuget-exec ./.12factor/build.sh
 FROM mdsol/dotnetcore21-aspnetcore-runtime as runtime
 WORKDIR /home/app
 
-COPY --from=build /home/app/src/Web/Downtime/out .
+COPY --from=build /home/app/src/Downtime/out .
 RUN chown -R app:app /home/app
 
 # Setup and run the app
