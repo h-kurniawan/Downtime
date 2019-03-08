@@ -67,9 +67,6 @@ This change will only affect users of the AS2 and FTP protocols from clients loc
 {notification.Start.ToString()} to {notification.End.ToString()} 
 
 
-## Action:
-Notify Affected Clients of the change.
-
 ## Affected URLs:
 `<urls will be filled in here>`
 
