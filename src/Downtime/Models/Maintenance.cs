@@ -15,8 +15,11 @@ namespace Downtime.Models
         [DataMember(Name = "end")]
         public string End { get; set; }
 
+        [DataMember(Name = "product_name")]
+        public string ProductName { get; set; }
+
         [DataMember(Name = "products")]
-        public IEnumerable<Product> Products { get; set; }
+        public IEnumerable<ProductUrl> ProductUrls { get; set; }
 
         [DataMember(Name = "draft_message")]
         public string DraftMessage { get; set; }

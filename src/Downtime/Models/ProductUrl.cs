@@ -14,5 +14,11 @@ namespace Downtime.Models
 
         [DataMember(Name = "iso_language")]
         public string IsoLanguage { get; set; }
+
+        [DataMember(Name = "project_managers")]
+        public IEnumerable<string> ProjectManagers { get; set; }
+
+        [DataMember(Name = "email_contacts")]
+        public IEnumerable<string> EmailContacts { get; set; }
     }
 }
