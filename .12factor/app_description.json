@@ -1,0 +1,35 @@
+{
+  "config_schema": {
+    "type": "object",
+    "properties": {
+      "ApplicationName": {
+        "type": "string"
+      },
+      "ConnectionStrings:DowntimeConnection": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "ApplicationName",
+      "ConnectionStrings:DowntimeConnection"
+    ]
+  },
+  "deploy_env": {
+    "cmd_release": [
+      "echo OK"
+    ],
+    "processes": {
+      "api": "dotnet Downtime.dll"
+    },
+    "listening_ports": {
+      "api": [ 8080 ]
+    },
+    "admin_tasks": {
+    },
+    "deploy_tasks": [
+      "api"    ],
+    "max_ram": {
+      "api": 2048
+    }
+  }
+}
