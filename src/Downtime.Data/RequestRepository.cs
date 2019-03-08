@@ -9,12 +9,11 @@ namespace Downtime.Data
         {
             if (id == 1)
             {
-                return new NotificationRequest
+                return  new NotificationRequest
                 {
                     Id = id,
                     Start = new DateTime(2019, 03, 20),
                     End = new DateTime(2019, 03, 21),
-                    DraftMessage = "123",
                     ProductName = "Rave Coder",
                     ProductUrls = new List<ProductUrl>
                     {
@@ -67,7 +66,6 @@ namespace Downtime.Data
                     Id = id,
                     Start = new DateTime(2019, 04, 1),
                     End = new DateTime(2019, 04, 2),
-                    DraftMessage = "123",
                     ProductName = "TSDV",
                     ProductUrls = new List<ProductUrl>
                     {
