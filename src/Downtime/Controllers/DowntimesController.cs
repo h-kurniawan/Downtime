@@ -70,12 +70,6 @@ This change will only affect users of the AS2 and FTP protocols from clients loc
 ## Action:
 Notify Affected Clients of the change.
 
-
-## Technical Questions/Inquiries:
-- Brett Marlowe
-- Raul Ortega
-
-
 ## Affected URLs:
 `<urls will be filled in here>`
 
