@@ -60,5 +60,12 @@ Thank you";
 
             return Ok(maintenance);
         }
+
+        [HttpGet]
+        [Route("/app_status")]
+        public IActionResult AppStatus()
+        {
+            return Ok("OK");
+        }
     }
 }
