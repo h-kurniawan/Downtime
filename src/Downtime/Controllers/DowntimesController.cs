@@ -77,7 +77,7 @@ Notify Affected Clients of the change.
 
 
 ## Affected URLs:
-<urls will be filled in here>
+`<urls will be filled in here>`
 
 ";
         }
