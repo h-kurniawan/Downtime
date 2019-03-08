@@ -25,9 +25,6 @@ ENV PowerShellExe=pwsh
 WORKDIR /home/app
 COPY . .
 
-# Update Version
-RUN pwsh -NonInteractive -executionpolicy Unrestricted -file ./build/Update-Version.ps1 -PropsFilePath ./version.props
-
 # Restore and build projects
 RUN nuget-exec ./.12factor/build.sh
 
