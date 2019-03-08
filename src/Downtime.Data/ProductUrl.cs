@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Downtime.Data
 {
     public class ProductUrl
     {
-        public string Url { get; set; }
+        public Uri Url { get; set; }
 
         public string Language { get; set; }
 

@@ -13,4 +13,8 @@
     <Folder Include="DraftMessages\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Downtime.Data\Downtime.Data.csproj" />
+  </ItemGroup>
+
 </Project>

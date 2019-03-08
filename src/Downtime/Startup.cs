@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Downtime.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -42,6 +43,9 @@ namespace Downtime
                     };
                 })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services
+                .AddTransient<IRequestRepository, RequestRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

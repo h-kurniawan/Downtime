@@ -20,7 +20,7 @@ namespace Downtime.Data
                     {
                         new ProductUrl
                         {
-                            Url = "sanofi.mdsol.com",
+                            Url = new Uri("https://sanofi.mdsol.com"),
                             Language = "en",
                             ClientEmails = new string[] 
                             {
@@ -35,13 +35,81 @@ namespace Downtime.Data
                                 "pm1@medidata.com",
                                 "pm2@medidata.com",
                             }
+                        },
+                        new ProductUrl
+                        {
+                            Url = new Uri("https://amgen.mdsol.co.jp"),
+                            Language = "ja",
+                            ClientEmails = new[] { "john.doe@amgen.co.jp" },
+                            ProjectManagerEmails = new[] { "pm1@medidata.com" }
+                        },
+                        new ProductUrl
+                        {
+                            Url = new Uri("https://amgen.mdsol.co.kr"),
+                            Language = "en",
+                            ClientEmails = new[] { "john.wick@amgen.co.kr" },
+                            ProjectManagerEmails = new[] { "pm3@medidata.com" }
+                        },
+                        new ProductUrl
+                        {
+                            Url = new Uri("https://amgen.mdsol.co.ch"),
+                            Language = "zh",
+                            ClientEmails = new[] { "jack.reacher@amgen.co.zh" },
+                            ProjectManagerEmails = new[] { "pm3@medidata.com" }
                         }
                     }
                 };
             }
             else if (id == 2)
             {
-                return null;
+                return new NotificationRequest
+                {
+                    Id = id,
+                    Start = new DateTime(2019, 04, 1),
+                    End = new DateTime(2019, 04, 2),
+                    DraftMessage = "123",
+                    ProductName = "TSDV",
+                    ProductUrls = new List<ProductUrl>
+                    {
+                        new ProductUrl
+                        {
+                            Url = new Uri("https://beigene.mdsol.com"),
+                            Language = "en",
+                            ClientEmails = new string[]
+                            {
+                                "customer1@beigene.com",
+                                "customer2@beigene.com",
+                                "customer3@beigene.com"
+                            },
+                            ProjectManagerEmails = new string[]
+                            {
+                                "pmx@medidata.com",
+                                "pmy@medidata.com",
+                            }
+                        },
+                        new ProductUrl
+                        {
+                            Url = new Uri("https://pfizer.mdsol.com"),
+                            Language = "en",
+                            ClientEmails = new[] { "john.doe@pfizer.com" },
+                            ProjectManagerEmails = new[] { "pmz@medidata.com" }
+                        },
+                        new ProductUrl
+                        {
+                            Url = new Uri("https://pfizer-new.mdsol.com"),
+                            Language = "en",
+                            ClientEmails = new[] { "john.wick@pfizer.com" },
+                            ProjectManagerEmails = new[] { "pmz@medidata.com" }
+                        },
+                        new ProductUrl
+                        {
+                            Url = new Uri("https://roche.mdsol.com"),
+                            Language = "en",
+                            ClientEmails = new[] { "jack.reacher@roche.com" },
+                            ProjectManagerEmails = new[] { "pmxyz@medidata.com" }
+                        }
+                    }
+                };
             }
             else
             {
