@@ -32,8 +32,7 @@ RUN nuget-exec ./.12factor/build.sh
 FROM mdsol/dotnetcore21-aspnetcore-runtime as runtime
 WORKDIR /home/app
 
-COPY --from=build /home/app/src/Web/Medidata.Mole.Api/out .
-COPY --from=build /home/app/src/Tools/Medidata.Mole.AmpridatvirMigrator/out /home/app/migrate_ampri_task
+COPY --from=build /home/app/src/Web/Downtime/out .
 RUN chown -R app:app /home/app
 
 # Setup and run the app
